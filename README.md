@@ -3,7 +3,18 @@
 docker of jiajiamuying(php+nodejs+java+golang+elastic search)
 
 
-ubuntu=18.04.1
+2019年3月23日 11:16:49
+家家母婴集团,线上一体化封装,
+云映像基于ubuntu16.64,
+同时包含golang+php+nodejs+java+elastric search. 
+线上有涉及的业务都支持了,
+整包的大小才1.12G,
+现用于全站的docker-compose与k8s与docker swarm等集群管理 
+感谢docker团队的付出与贡献.
+by 锋锋
+
+
+ubuntu=16.04
 php=PHP 7.0.32-0ubuntu0.16.04.1 (cli)
 
 
