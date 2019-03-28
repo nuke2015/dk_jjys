@@ -27,7 +27,7 @@ RUN apt-get update \
 php7.0-mysql php7.0-curl php7.0-xml php7.0-gd php7.0-zip php-bcmath php-mbstring wget vim \
 nginx php-redis mysql-client nodejs openjdk-8-jre curl rsync subversion \
 && apt-get remove -y php7.0-snmp \
-&& wget $mylinux/elasticsearch-1.7.0.deb \
+&& wget https://static-ddys.oss-cn-shenzhen.aliyuncs.com/linux/elasticsearch-1.7.0.deb \
 && dpkg -i elasticsearch-1.7.0.deb \
 && rm ./elasticsearch-1.7.0.deb \
 && apt-get clean && rm -rf /tmp/* /var/tmp/* \
@@ -38,7 +38,7 @@ nginx php-redis mysql-client nodejs openjdk-8-jre curl rsync subversion \
 
 #nodejs
 RUN apt-get update && apt-get install -y gnupg gnupg2 \
-&& curl -sL "$mylinux/setup_nodejs_10.x" | sh \
+&& curl -sL "https://static-ddys.oss-cn-shenzhen.aliyuncs.com/linux/setup_nodejs_10.x" | sh \
 && apt-get update && apt-get install -y nodejs \
 && node --version && npm --version \
 && npm config set registry "https://registry.npm.taobao.org" \
@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y gnupg gnupg2 \
 
 #golang-env
 RUN apt-get update \
-&& wget $mylinux/go1.11.linux-amd64.tar.gz -O go.tar.gz \
+&& wget https://static-ddys.oss-cn-shenzhen.aliyuncs.com/linux/go1.11.linux-amd64.tar.gz -O go.tar.gz \
 && tar -xzf go.tar.gz -C /usr/local \
 && rm go.tar.gz \
 && mkdir $HOME/gopath
